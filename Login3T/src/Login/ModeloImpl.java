@@ -19,7 +19,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 	private VistaSignInImpl vistaSI;
 	private VistaWelcomeImpl vistaWE;
 	private String usr2 = "System";
-	private String pwd2 = "Developer1";
+	private String pwd2 = "";
 	private Connection conexion;
 	private int counter = 0;
 	private PreparedStatement pstmt;
@@ -38,7 +38,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 		String url = "jdbc:oracle:thin:@localhost:1521:XE";
 		try {
 			conexion = DriverManager.getConnection(url, usr2, pwd2);
-			System.out.println(" - Conexión con ORACLE establecida -");
+			System.out.println(" - ConexiÃ³n con ORACLE establecida -");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -56,7 +56,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 		this.vistaWE = vistaWE;
 	}
 
-	// Actualiza la tabla cada vez que se da de alta, borra ó modifica.
+	// Actualiza la tabla cada vez que se da de alta, borra Ã³ modifica.
 	public void ActualizaTabla() {
 		String Actuact = "SELECT * FROM LOGIN.MATER";
 		try {
@@ -88,13 +88,13 @@ public class ModeloImpl extends JFrame implements Modelo {
 				vistaLI.setVisible(false);
 			} else if (counter == 2) {
 				JOptionPane.showMessageDialog(null,
-						"Has agotado el nº de intentos disponibles.", "El programa se cerrará",
+						"Has agotado el nÂº de intentos disponibles.", "El programa se cerrarÃ¡",
 						JOptionPane.WARNING_MESSAGE);
 				System.exit(0);
 			} else {
 				counter++;
 				JOptionPane.showMessageDialog(null,
-						"Contraseña incorrecta, oportunidad " + counter
+						"ContraseÃ±a incorrecta, oportunidad " + counter
 								+ "/3. Quedan " + (3 - counter) + " intentos.",
 						"Error.", JOptionPane.WARNING_MESSAGE);
 			}
@@ -130,7 +130,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 		} else {
 
 		}
-		// comprobacion de que el usuario no está vacío, que los password coinciden y que el email es valido
+		// comprobacion de que el usuario no estÃ¡ vacÃ­o, que los password coinciden y que el email es valido
 		if (nick.length() > 0 && pss1.equals(pss2) && pss1.length() > 0
 				&& aux > 0) {
 			try {
@@ -159,7 +159,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 			JOptionPane
 					.showMessageDialog(
 							null,
-							"Comprueba que el usuario no esta vacío, que las contraseñas coinciden y que ha escrito correctamente el Email",
+							"Comprueba que el usuario no esta vacÃ­o, que las contraseÃ±as coinciden y que ha escrito correctamente el Email",
 							"Error.", JOptionPane.WARNING_MESSAGE);
 		}
 
@@ -171,7 +171,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 
 		if (cod_MatText.getText().equals("")) {
 			JOptionPane.showMessageDialog(null,
-					"No puedes dejar el campo de COD_MAT vacío.", "Error.",
+					"No puedes dejar el campo de COD_MAT vacÃ­o.", "Error.",
 					JOptionPane.WARNING_MESSAGE);
 		} else {
 			try {
