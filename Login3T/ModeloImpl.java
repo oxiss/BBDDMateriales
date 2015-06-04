@@ -72,6 +72,9 @@ public class ModeloImpl extends JFrame implements Modelo {
 	public void passCheck(JTextField usr, JPasswordField pss) {
 		
 		System.out.println("por ejemplo, vamos a modificar esta linea y a realizar un commit");
+		System.out.println("por ejemplo, vamos a modificar esta linea y a realizar un commit");
+		System.out.println("por ejemplo, vamos a modificar esta linea y a realizar un commit");
+		System.out.println("por ejemplo, vamos a modificar esta linea y a realizar un commit");
 
 		char[] pwd = pss.getPassword();
 		String user = usr.getText();
