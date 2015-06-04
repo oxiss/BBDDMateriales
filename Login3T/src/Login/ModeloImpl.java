@@ -60,7 +60,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 	public void ActualizaTabla() {
 		
 		
-		System.out.println("hola que tal bien no?");
+		System.out.println("hola tal bien no?");
 		
 		String Actuact = "SELECT * FROM LOGIN.MATER";
 		try {
