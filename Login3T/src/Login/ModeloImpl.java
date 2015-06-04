@@ -19,7 +19,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 	private VistaSignInImpl vistaSI;
 	private VistaWelcomeImpl vistaWE;
 	private String usr2 = "System";
-	private String pwd2 = "Developer1";
+	private String pwd2 = "";
 	private Connection conexion;
 	private int counter = 0;
 	private PreparedStatement pstmt;
@@ -58,6 +58,10 @@ public class ModeloImpl extends JFrame implements Modelo {
 
 	// Actualiza la tabla cada vez que se da de alta, borra ó modifica.
 	public void ActualizaTabla() {
+		
+		
+		System.out.println("hola que tal");
+		
 		String Actuact = "SELECT * FROM LOGIN.MATER";
 		try {
 			pstmt = conexion.prepareStatement(Actuact);
