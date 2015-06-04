@@ -26,9 +26,8 @@ public class ModeloImpl extends JFrame implements Modelo {
 	private Statement stmt;
 
 	public ModeloImpl() {
+		
 		super();
-		
-		
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -59,8 +58,7 @@ public class ModeloImpl extends JFrame implements Modelo {
 	// Actualiza la tabla cada vez que se da de alta, borra ó modifica.
 	public void ActualizaTabla() {
 		
-		
-		System.out.println("vamos a escribir una linea nueva");
+		System.out.println("Por ejemplo, vamos a escribir esta linea y despues haremos un commit");
 		
 		String Actuact = "SELECT * FROM LOGIN.MATER";
 		try {
